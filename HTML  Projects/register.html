@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+            <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    
+    </head>
+    <body>
+<div class="container">
+    <span id="clock"></span>
+    <div id="displaydate"></div>
+    <h1>Register</h1>
+    <hr/>
+    <div class="row">
+        <div id="displaydate"></div>
+        <div class="col-md-4">
+            
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+    </div>
+    <div class="form-group">
+        <label>Firstname</label>
+        <input id="txtfname" type="text" value="" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Lastname</label>
+        <input id="txtlname" type="text" value="" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input id="txtemail" type="text" value="" class="form-control" />
+    </div>
+    <button class="btn btn-primary" onclick="AddUser()">Save</button>
+    <button class="btn btn-secondary">Reset</button>
+    <hr/>
+    <div id="msg">
+
+    </div>
+    <hr/>
+    <table id="tbluserdata" class="table table-bordered">
+        <thead>
+            <tr><th>F.Name</th>
+                <th>L.Name</th>
+                <th>Email</th></tr>
+        </thead>
+        <tbody id="tblbodydata">
+
+        </tbody>
+    </table>
+</div>
+
+
+
+        <script src="script/myscript.js"></script>
+
+        
+        <script>
+            function waitAndshow() {
+                //define a date and time variable
+                var systemdate = new Date();
+              
+                //display the updated time after every 4 seconds
+                document.getElementById("clock").innerHTML = systemdate.toLocaleTimeString();
+              }
+              
+               //define time interval and call user-defined waitAndshow function
+               setInterval(waitAndshow, 1000);
+            </script>
+
+
+
+    </body>
+</html>
